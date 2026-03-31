@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Aaysha Timalsina | Cybersecurity Portfolio</title>
+<title>Aaysha | Cybersecurity Portfolio</title>
 
 <style>
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #0f172a;
+  background: #020617;
   color: #e2e8f0;
 }
 
@@ -18,7 +18,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 15px 40px;
-  background: #020617;
+  background: rgba(0,0,0,0.8);
   position: sticky;
   top: 0;
 }
@@ -27,7 +27,6 @@ nav a {
   color: #38bdf8;
   margin-left: 20px;
   text-decoration: none;
-  font-weight: bold;
 }
 
 nav a:hover {
@@ -41,32 +40,18 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #020617, #4c1d95);
+  background: radial-gradient(circle at top, #4c1d95, #020617);
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 55px;
+  font-size: 60px;
   margin: 0;
 }
 
-.hero span {
+.typing {
+  font-size: 22px;
   color: #a78bfa;
-}
-
-.hero p {
-  font-size: 20px;
-  color: #cbd5f5;
-}
-
-.btn {
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #a78bfa;
-  color: black;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
 }
 
 /* SECTION */
@@ -78,7 +63,6 @@ section {
 
 h2 {
   text-align: center;
-  margin-bottom: 40px;
   color: #a78bfa;
 }
 
@@ -91,16 +75,34 @@ h2 {
 
 /* CARD */
 .card {
-  background: linear-gradient(145deg, #1e293b, #020617);
+  background: #0f172a;
   padding: 20px;
   border-radius: 12px;
+  border: 1px solid #1e293b;
   transition: 0.3s;
-  border: 1px solid #334155;
 }
 
 .card:hover {
   transform: translateY(-8px);
   border-color: #a78bfa;
+  box-shadow: 0 0 15px #a78bfa44;
+}
+
+/* SKILL BARS */
+.skill {
+  margin: 15px 0;
+}
+
+.bar {
+  height: 10px;
+  background: #1e293b;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 10px;
+  background: linear-gradient(90deg, #38bdf8, #a78bfa);
 }
 
 /* LINKS */
@@ -121,82 +123,111 @@ footer {
 
 <body>
 
-<!-- NAVBAR -->
-
 <nav>
   <div><strong>Aaysha</strong></div>
   <div>
     <a href="#about">About</a>
     <a href="#labs">Labs</a>
     <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <a href="#skills">Skills</a>
   </div>
 </nav>
 
-<!-- HERO -->
-
 <div class="hero">
-  <h1>Hi, I'm <span>Aaysha</span></h1>
-  <p>Cybersecurity Student | SOC Analyst | CTF Player</p>
-  <a href="#about" class="btn">Explore My Work</a>
+  <h1>👩‍💻 Aaysha</h1>
+  <p class="typing" id="typing"></p>
 </div>
 
-<!-- ABOUT -->
-
 <section id="about">
-  <h2>🛡️ About Me</h2>
+  <h2>About Me</h2>
   <p style="text-align:center;">
-    I am a cybersecurity student focused on detecting attacks, analyzing logs, 
-    and solving real-world challenges through hands-on labs and CTFs.
+    Cybersecurity student passionate about detecting attacks, analyzing logs, 
+    and solving real-world challenges through SOC labs and CTFs.
   </p>
 </section>
 
-<!-- SOC LABS -->
-
 <section id="labs">
-  <h2>🔍 SOC Labs</h2>
+  <h2>SOC Labs</h2>
   <div class="grid">
     <div class="card">
       <h3>Brute Force Detection</h3>
-      <p>Detected SSH brute force attacks using Hydra and log analysis.</p>
+      <p>Detected SSH brute force attacks using Hydra and logs.</p>
     </div>
 
 ```
 <div class="card">
   <h3>Port Scan Detection</h3>
-  <p>Identified suspicious Nmap scanning activity using network patterns.</p>
+  <p>Identified Nmap scanning patterns and suspicious traffic.</p>
 </div>
 ```
 
   </div>
 </section>
 
-<!-- PROJECTS -->
-
 <section id="projects">
-  <h2>🧪 Projects</h2>
+  <h2>Projects</h2>
   <div class="grid">
     <div class="card">
       <h3>Email Forensics Analyzer</h3>
-      <p>Python GUI tool to analyze suspicious email headers.</p>
+      <p>Python GUI tool for analyzing suspicious emails.</p>
       <a href="https://github.com/aaysha000/Email_Forensic_Tool">View Project</a>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
+<section id="skills">
+  <h2>Skills</h2>
 
-<section id="contact">
-  <h2>🔗 Contact</h2>
-  <p style="text-align:center;">
-    <a href="https://github.com/aaysha000">GitHub</a> |
-    <a href="https://tryhackme.com/p/aayshatimalsina">TryHackMe</a>
-  </p>
+  <div class="skill">Wireshark
+    <div class="bar"><div class="fill" style="width:80%"></div></div>
+  </div>
+
+  <div class="skill">Nmap
+    <div class="bar"><div class="fill" style="width:85%"></div></div>
+  </div>
+
+  <div class="skill">Python
+    <div class="bar"><div class="fill" style="width:75%"></div></div>
+  </div>
+
+  <div class="skill">Linux
+    <div class="bar"><div class="fill" style="width:70%"></div></div>
+  </div>
+
 </section>
 
 <footer>
   <p>© 2026 Aaysha Timalsina</p>
 </footer>
+
+<script>
+const text = ["SOC Analyst", "CTF Player", "Cybersecurity Student"];
+let i = 0, j = 0, current = "", isDeleting = false;
+
+function type() {
+  current = text[i];
+  if (isDeleting) {
+    document.getElementById("typing").innerHTML = current.substring(0, j--);
+  } else {
+    document.getElementById("typing").innerHTML = current.substring(0, j++);
+  }
+
+  if (!isDeleting && j === current.length) {
+    isDeleting = true;
+    setTimeout(type, 1000);
+    return;
+  }
+
+  if (isDeleting && j === 0) {
+    isDeleting = false;
+    i = (i + 1) % text.length;
+  }
+
+  setTimeout(type, isDeleting ? 50 : 100);
+}
+
+type();
+</script>
 
 </body>
 </html>
