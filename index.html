@@ -13,40 +13,65 @@ body {
   color: #e2e8f0;
 }
 
-/* HERO SECTION */
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #020617;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  color: #38bdf8;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #a78bfa;
+}
+
+/* HERO */
 .hero {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #020617, #1e293b);
+  background: linear-gradient(135deg, #020617, #4c1d95);
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 50px;
+  font-size: 55px;
   margin: 0;
+}
+
+.hero span {
+  color: #a78bfa;
 }
 
 .hero p {
   font-size: 20px;
-  color: #94a3b8;
+  color: #cbd5f5;
 }
 
-.hero a {
+.btn {
   margin-top: 20px;
-  padding: 10px 20px;
-  background: #38bdf8;
+  padding: 12px 25px;
+  background: #a78bfa;
   color: black;
-  border-radius: 5px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
 }
 
 /* SECTION */
 section {
-  padding: 60px 20px;
+  padding: 70px 20px;
   max-width: 1000px;
   margin: auto;
 }
@@ -54,6 +79,7 @@ section {
 h2 {
   text-align: center;
   margin-bottom: 40px;
+  color: #a78bfa;
 }
 
 /* GRID */
@@ -65,21 +91,21 @@ h2 {
 
 /* CARD */
 .card {
-  background: #1e293b;
+  background: linear-gradient(145deg, #1e293b, #020617);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   transition: 0.3s;
+  border: 1px solid #334155;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  background: #334155;
+  transform: translateY(-8px);
+  border-color: #a78bfa;
 }
 
 /* LINKS */
 a {
   color: #38bdf8;
-  text-decoration: none;
 }
 
 /* FOOTER */
@@ -95,65 +121,72 @@ footer {
 
 <body>
 
+<!-- NAVBAR -->
+
+<nav>
+  <div><strong>Aaysha</strong></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#labs">Labs</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
 <!-- HERO -->
 
 <div class="hero">
-  <h1>👩‍💻 Aaysha Timalsina</h1>
+  <h1>Hi, I'm <span>Aaysha</span></h1>
   <p>Cybersecurity Student | SOC Analyst | CTF Player</p>
-  <a href="#about">Explore</a>
+  <a href="#about" class="btn">Explore My Work</a>
 </div>
 
 <!-- ABOUT -->
 
 <section id="about">
-  <h2>About Me</h2>
+  <h2>🛡️ About Me</h2>
   <p style="text-align:center;">
-    Passionate cybersecurity student with hands-on experience in SOC analysis, 
-    CTF challenges, and building security tools. Focused on detecting real-world attacks.
+    I am a cybersecurity student focused on detecting attacks, analyzing logs, 
+    and solving real-world challenges through hands-on labs and CTFs.
   </p>
 </section>
 
 <!-- SOC LABS -->
 
-<section>
+<section id="labs">
   <h2>🔍 SOC Labs</h2>
   <div class="grid">
     <div class="card">
       <h3>Brute Force Detection</h3>
-      <p>Detected SSH brute force attack using logs and Hydra.</p>
+      <p>Detected SSH brute force attacks using Hydra and log analysis.</p>
     </div>
-    <div class="card">
-      <h3>Port Scan Detection</h3>
-      <p>Identified Nmap scanning behavior using traffic patterns.</p>
-    </div>
+
+```
+<div class="card">
+  <h3>Port Scan Detection</h3>
+  <p>Identified suspicious Nmap scanning activity using network patterns.</p>
+</div>
+```
+
   </div>
 </section>
 
 <!-- PROJECTS -->
 
-<section>
+<section id="projects">
   <h2>🧪 Projects</h2>
   <div class="grid">
     <div class="card">
       <h3>Email Forensics Analyzer</h3>
-      <p>Python GUI tool for analyzing suspicious email headers.</p>
+      <p>Python GUI tool to analyze suspicious email headers.</p>
       <a href="https://github.com/aaysha000/Email_Forensic_Tool">View Project</a>
     </div>
   </div>
 </section>
 
-<!-- SKILLS -->
-
-<section>
-  <h2>🧠 Skills</h2>
-  <p style="text-align:center;">
-    Wireshark • Nmap • Python • Linux • Burp Suite • Splunk (learning)
-  </p>
-</section>
-
 <!-- CONTACT -->
 
-<section>
+<section id="contact">
   <h2>🔗 Contact</h2>
   <p style="text-align:center;">
     <a href="https://github.com/aaysha000">GitHub</a> |
