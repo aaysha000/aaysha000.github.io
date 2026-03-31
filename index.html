@@ -3,122 +3,108 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Aaysha | Cybersecurity Portfolio</title>
+<title>Aaysha Timalsina | Cybersecurity Portfolio</title>
 
 <style>
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #020617;
-  color: #e2e8f0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0b0f19;
+  color: #e5e7eb;
 }
 
 /* NAVBAR */
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 15px 40px;
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(10px);
-  position: sticky;
-  top: 0;
+  padding: 20px 60px;
+  border-bottom: 1px solid #1f2937;
 }
 
 nav a {
-  color: #38bdf8;
-  margin-left: 20px;
+  color: #9ca3af;
+  margin-left: 25px;
   text-decoration: none;
-  transition: 0.3s;
+  font-size: 14px;
 }
 
 nav a:hover {
-  color: #a78bfa;
+  color: #ffffff;
 }
 
 /* HERO */
 .hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(circle at top, #4c1d95, #020617);
+  padding: 120px 20px;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 60px;
+  font-size: 48px;
+  margin-bottom: 10px;
 }
 
-.typing {
-  color: #a78bfa;
-  font-size: 22px;
+.hero p {
+  font-size: 18px;
+  color: #9ca3af;
 }
 
-/* BUTTON */
 .btn {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #a78bfa;
-  color: black;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 22px;
+  border: 1px solid #374151;
   border-radius: 6px;
+  color: white;
   text-decoration: none;
-  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #111827;
 }
 
 /* SECTION */
 section {
-  padding: 70px 20px;
-  max-width: 1000px;
+  max-width: 900px;
   margin: auto;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.6s;
-}
-
-section.show {
-  opacity: 1;
-  transform: translateY(0);
+  padding: 70px 20px;
 }
 
 h2 {
-  text-align: center;
-  color: #a78bfa;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.card {
+  padding: 20px;
+  border: 1px solid #1f2937;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: #4b5563;
 }
 
 /* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
-}
-
-/* CARD */
-.card {
-  background: rgba(30,41,59,0.6);
-  padding: 20px;
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  border: 1px solid #1e293b;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  border-color: #a78bfa;
-  box-shadow: 0 0 20px #a78bfa33;
 }
 
 /* LINKS */
 a {
-  color: #38bdf8;
+  color: #60a5fa;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 20px;
-  background: #020617;
+  padding: 40px;
+  color: #6b7280;
 }
 </style>
 
@@ -130,106 +116,74 @@ footer {
   <div><strong>Aaysha</strong></div>
   <div>
     <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#labs">Labs</a>
     <a href="#projects">Projects</a>
-    <a href="#links">Links</a>
+    <a href="#labs">Labs</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <div class="hero">
-  <h1>👩‍💻 Aaysha</h1>
-  <p class="typing" id="typing"></p>
+  <h1>Aaysha Timalsina</h1>
+  <p>Cybersecurity Student | SOC Analyst | CTF Player</p>
 
-  <div>
-    <a href="resume.pdf" class="btn">Resume</a>
-    <a href="blog.html" class="btn">Blogs</a>
-  </div>
+<a href="resume.pdf" class="btn">Download Resume</a> <a href="blog.html" class="btn">Read Blogs</a>
+
 </div>
 
 <section id="about">
-  <h2>About Me</h2>
-  <p style="text-align:center;">
-    Cybersecurity student passionate about SOC analysis, CTF challenges, and real-world attack detection.
+  <h2>About</h2>
+  <p>
+    Cybersecurity student focused on detecting attacks, analyzing logs, and solving 
+    real-world security challenges. Experience with SOC labs, CTFs, and Python-based tools.
   </p>
-</section>
-
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="grid">
-    <div class="card">SOC Analysis</div>
-    <div class="card">Wireshark</div>
-    <div class="card">Nmap</div>
-    <div class="card">Python</div>
-    <div class="card">Linux</div>
-    <div class="card">Burp Suite</div>
-  </div>
-</section>
-
-<section id="labs">
-  <h2>SOC Labs</h2>
-  <div class="grid">
-    <div class="card">Brute Force Detection</div>
-    <div class="card">Port Scan Detection</div>
-  </div>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
-  <div class="grid">
-    <div class="card">
-      Email Forensics Analyzer<br>
-      <a href="https://github.com/aaysha000/Email_Forensic_Tool">View</a>
-    </div>
+
+  <div class="card">
+    <h3>Email Forensics Analyzer</h3>
+    <p>Python GUI tool for analyzing suspicious email headers and detecting threats.</p>
+    <a href="https://github.com/aaysha000/Email_Forensic_Tool">View Project</a>
   </div>
+
 </section>
 
-<section id="links">
-  <h2>Connect</h2>
-  <p style="text-align:center;">
-    <a href="https://github.com/aaysha000">GitHub</a> |
-    <a href="https://tryhackme.com/p/aayshatimalsina">TryHackMe</a> |
-    <a href="https://medium.com/@aayshatimalsina">Medium</a> |
+<section id="labs">
+  <h2>SOC Labs</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Brute Force Detection</h3>
+      <p>Detected SSH brute force attack using logs and Hydra.</p>
+    </div>
+
+```
+<div class="card">
+  <h3>Port Scan Detection</h3>
+  <p>Identified Nmap scan patterns through network traffic analysis.</p>
+</div>
+```
+
+  </div>
+
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+
+  <p>
+    <a href="https://github.com/aaysha000">GitHub</a><br>
+    <a href="https://tryhackme.com/p/aayshatimalsina">TryHackMe</a><br>
+    <a href="https://medium.com/@aayshatimalsina">Medium</a><br>
     <a href="https://www.linkedin.com/in/aaysha-timalsina-07a197367/">LinkedIn</a>
   </p>
+
 </section>
 
 <footer>
   <p>© 2026 Aaysha Timalsina</p>
 </footer>
-
-<script>
-const text = ["SOC Analyst", "CTF Player", "Cybersecurity Student"];
-let i = 0, j = 0, current = "", isDeleting = false;
-
-function type() {
-  current = text[i];
-  document.getElementById("typing").innerHTML = current.substring(0, j);
-
-  if (!isDeleting && j < current.length) {
-    j++;
-  } else if (isDeleting && j > 0) {
-    j--;
-  } else {
-    isDeleting = !isDeleting;
-    if (!isDeleting) i = (i + 1) % text.length;
-  }
-
-  setTimeout(type, isDeleting ? 50 : 100);
-}
-type();
-
-/* SCROLL ANIMATION */
-const sections = document.querySelectorAll("section");
-window.addEventListener("scroll", () => {
-  sections.forEach(sec => {
-    const top = sec.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      sec.classList.add("show");
-    }
-  });
-});
-</script>
 
 </body>
 </html>
