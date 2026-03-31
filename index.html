@@ -34,7 +34,7 @@ nav a:hover {
 
 /* HERO */
 .hero {
-  padding: 120px 20px;
+  padding: 120px 20px 80px;
   text-align: center;
 }
 
@@ -50,7 +50,7 @@ nav a:hover {
 
 .btn {
   display: inline-block;
-  margin-top: 20px;
+  margin: 10px 8px 0;
   padding: 10px 22px;
   border: 1px solid #374151;
   border-radius: 6px;
@@ -63,11 +63,23 @@ nav a:hover {
   background: #111827;
 }
 
+/* PROFILE IMAGE */
+.profile {
+  margin-top: 30px;
+}
+
+.profile img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #1f2937;
+}
+
 /* SECTION */
 section {
   max-width: 900px;
   margin: auto;
-  padding: 70px 20px;
+  padding: 60px 20px;
 }
 
 h2 {
@@ -100,11 +112,27 @@ a {
   color: #60a5fa;
 }
 
+/* CONTACT */
+.contact a {
+  display: block;
+  margin-bottom: 10px;
+}
+
 /* FOOTER */
 footer {
   text-align: center;
   padding: 40px;
   color: #6b7280;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav {
+    padding: 20px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 
@@ -128,13 +156,19 @@ footer {
 
 <a href="resume.pdf" class="btn">Download Resume</a> <a href="blog.html" class="btn">Read Blogs</a>
 
+  <!-- OPTIONAL PROFILE IMAGE -->
+
+  <div class="profile">
+    <img src="profile.jpg" alt="Profile">
+  </div>
 </div>
 
 <section id="about">
   <h2>About</h2>
   <p>
-    Cybersecurity student focused on detecting attacks, analyzing logs, and solving 
-    real-world security challenges. Experience with SOC labs, CTFs, and Python-based tools.
+    I am a cybersecurity student with a strong interest in threat detection, 
+    log analysis, and real-world attack simulation. I build hands-on SOC labs, 
+    solve CTF challenges, and develop tools to better understand security systems.
   </p>
 </section>
 
@@ -143,7 +177,10 @@ footer {
 
   <div class="card">
     <h3>Email Forensics Analyzer</h3>
-    <p>Python GUI tool for analyzing suspicious email headers and detecting threats.</p>
+    <p>
+      Developed a Python-based GUI application to analyze email headers, 
+      identify suspicious indicators, and assist in forensic investigations.
+    </p>
     <a href="https://github.com/aaysha000/Email_Forensic_Tool">View Project</a>
   </div>
 
@@ -155,13 +192,19 @@ footer {
   <div class="grid">
     <div class="card">
       <h3>Brute Force Detection</h3>
-      <p>Detected SSH brute force attack using logs and Hydra.</p>
+      <p>
+        Simulated SSH brute force attacks using Hydra and identified attack 
+        patterns through system logs.
+      </p>
     </div>
 
 ```
 <div class="card">
   <h3>Port Scan Detection</h3>
-  <p>Identified Nmap scan patterns through network traffic analysis.</p>
+  <p>
+    Detected Nmap scanning behavior by analyzing network traffic and 
+    identifying abnormal connection patterns.
+  </p>
 </div>
 ```
 
@@ -172,12 +215,12 @@ footer {
 <section id="contact">
   <h2>Contact</h2>
 
-  <p>
-    <a href="https://github.com/aaysha000">GitHub</a><br>
-    <a href="https://tryhackme.com/p/aayshatimalsina">TryHackMe</a><br>
-    <a href="https://medium.com/@aayshatimalsina">Medium</a><br>
+  <div class="contact">
+    <a href="https://github.com/aaysha000">GitHub</a>
+    <a href="https://tryhackme.com/p/aayshatimalsina">TryHackMe</a>
+    <a href="https://medium.com/@aayshatimalsina">Medium</a>
     <a href="https://www.linkedin.com/in/aaysha-timalsina-07a197367/">LinkedIn</a>
-  </p>
+  </div>
 
 </section>
 
