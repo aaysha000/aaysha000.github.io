@@ -1,9 +1,127 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
-  <title>Aaysha | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Aaysha | Cybersecurity Portfolio</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #020617;
+  color: #e2e8f0;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  color: #38bdf8;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #a78bfa;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #4c1d95, #020617);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 60px;
+}
+
+.typing {
+  color: #a78bfa;
+  font-size: 22px;
+}
+
+/* BUTTON */
+.btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #a78bfa;
+  color: black;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+/* SECTION */
+section {
+  padding: 70px 20px;
+  max-width: 1000px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  text-align: center;
+  color: #a78bfa;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: rgba(30,41,59,0.6);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid #1e293b;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: #a78bfa;
+  box-shadow: 0 0 20px #a78bfa33;
+}
+
+/* LINKS */
+a {
+  color: #38bdf8;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+}
+</style>
+
 </head>
 
 <body>
@@ -11,27 +129,107 @@
 <nav>
   <div><strong>Aaysha</strong></div>
   <div>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="labs.html">Labs</a>
-    <a href="contact.html">Contact</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#labs">Labs</a>
+    <a href="#projects">Projects</a>
+    <a href="#links">Links</a>
   </div>
 </nav>
 
 <div class="hero">
-  <h1>👩‍💻 Aaysha Timalsina<br>Cybersecurity Portfolio</h1>
+  <h1>👩‍💻 Aaysha</h1>
+  <p class="typing" id="typing"></p>
+
+  <div>
+    <a href="resume.pdf" class="btn">Resume</a>
+    <a href="blog.html" class="btn">Blogs</a>
+  </div>
 </div>
 
-<section>
+<section id="about">
   <h2>About Me</h2>
   <p style="text-align:center;">
-    Cybersecurity student focused on SOC analysis, CTF challenges, and building security tools.
+    Cybersecurity student passionate about SOC analysis, CTF challenges, and real-world attack detection.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">SOC Analysis</div>
+    <div class="card">Wireshark</div>
+    <div class="card">Nmap</div>
+    <div class="card">Python</div>
+    <div class="card">Linux</div>
+    <div class="card">Burp Suite</div>
+  </div>
+</section>
+
+<section id="labs">
+  <h2>SOC Labs</h2>
+  <div class="grid">
+    <div class="card">Brute Force Detection</div>
+    <div class="card">Port Scan Detection</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card">
+      Email Forensics Analyzer<br>
+      <a href="https://github.com/aaysha000/Email_Forensic_Tool">View</a>
+    </div>
+  </div>
+</section>
+
+<section id="links">
+  <h2>Connect</h2>
+  <p style="text-align:center;">
+    <a href="https://github.com/aaysha000">GitHub</a> |
+    <a href="https://tryhackme.com/p/aayshatimalsina">TryHackMe</a> |
+    <a href="https://medium.com/@aayshatimalsina">Medium</a> |
+    <a href="https://www.linkedin.com/in/aaysha-timalsina-07a197367/">LinkedIn</a>
   </p>
 </section>
 
 <footer>
-  <p>© 2026 Aaysha</p>
+  <p>© 2026 Aaysha Timalsina</p>
 </footer>
+
+<script>
+const text = ["SOC Analyst", "CTF Player", "Cybersecurity Student"];
+let i = 0, j = 0, current = "", isDeleting = false;
+
+function type() {
+  current = text[i];
+  document.getElementById("typing").innerHTML = current.substring(0, j);
+
+  if (!isDeleting && j < current.length) {
+    j++;
+  } else if (isDeleting && j > 0) {
+    j--;
+  } else {
+    isDeleting = !isDeleting;
+    if (!isDeleting) i = (i + 1) % text.length;
+  }
+
+  setTimeout(type, isDeleting ? 50 : 100);
+}
+type();
+
+/* SCROLL ANIMATION */
+const sections = document.querySelectorAll("section");
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      sec.classList.add("show");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
