@@ -2,170 +2,167 @@
 
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Aaysha Timalsina | Cybersecurity Portfolio</title>
+<meta charset="UTF-8">
+<title>Aaysha Timalsina | Cybersecurity Portfolio</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-      scroll-behavior: smooth;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
 
-    header {
-      text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(135deg, #020617, #1e293b);
-    }
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #020617, #1e293b);
+  text-align: center;
+}
 
-    h1 {
-      margin: 0;
-      font-size: 42px;
-    }
+.hero h1 {
+  font-size: 50px;
+  margin: 0;
+}
 
-    header p {
-      font-size: 18px;
-      color: #94a3b8;
-    }
+.hero p {
+  font-size: 20px;
+  color: #94a3b8;
+}
 
-    nav {
-      background: #020617;
-      padding: 10px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-    }
+.hero a {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #38bdf8;
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    nav a {
-      color: #38bdf8;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+/* SECTION */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
 
-    nav a:hover {
-      color: white;
-    }
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 50px 20px;
-    }
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 10px;
-      transition: 0.3s;
-    }
+/* CARD */
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
 
-    .card:hover {
-      transform: scale(1.02);
-      background: #334155;
-    }
+.card:hover {
+  transform: translateY(-5px);
+  background: #334155;
+}
 
-    h2 {
-      border-bottom: 2px solid #38bdf8;
-      padding-bottom: 5px;
-    }
+/* LINKS */
+a {
+  color: #38bdf8;
+  text-decoration: none;
+}
 
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #020617;
-      color: #64748b;
-    }
-  </style>
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+  color: #64748b;
+}
+</style>
 
 </head>
 
 <body>
 
-<header>
+<!-- HERO -->
+
+<div class="hero">
   <h1>👩‍💻 Aaysha Timalsina</h1>
   <p>Cybersecurity Student | SOC Analyst | CTF Player</p>
-</header>
+  <a href="#about">Explore</a>
+</div>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#labs">SOC Labs</a>
-  <a href="#offensive">Offensive</a>
-  <a href="#projects">Projects</a>
-  <a href="#skills">Skills</a>
-  <a href="#contact">Contact</a>
-</nav>
+<!-- ABOUT -->
 
 <section id="about">
-  <h2>🛡️ About Me</h2>
-  <p>
-    I am a cybersecurity student passionate about detecting attacks, analyzing logs, 
-    and solving real-world security challenges. I actively work on SOC labs, 
-    CTF challenges, and security tools using Python.
+  <h2>About Me</h2>
+  <p style="text-align:center;">
+    Passionate cybersecurity student with hands-on experience in SOC analysis, 
+    CTF challenges, and building security tools. Focused on detecting real-world attacks.
   </p>
 </section>
 
-<section id="labs">
+<!-- SOC LABS -->
+
+<section>
   <h2>🔍 SOC Labs</h2>
-
-  <div class="card">
-    <h3>Brute Force Detection</h3>
-    <p>Simulated SSH brute force attack using Hydra and detected it through log analysis.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Brute Force Detection</h3>
+      <p>Detected SSH brute force attack using logs and Hydra.</p>
+    </div>
+    <div class="card">
+      <h3>Port Scan Detection</h3>
+      <p>Identified Nmap scanning behavior using traffic patterns.</p>
+    </div>
   </div>
-
-  <div class="card">
-    <h3>Port Scan Detection</h3>
-    <p>Analyzed Nmap scans and identified suspicious network behavior.</p>
-  </div>
-
 </section>
 
-<section id="offensive">
-  <h2>🔴 Offensive Security</h2>
+<!-- PROJECTS -->
 
-  <div class="card">
-    <h3>XSS Lab</h3>
-    <p>Tested and exploited cross-site scripting vulnerabilities in lab environments.</p>
-  </div>
-
-</section>
-
-<section id="projects">
+<section>
   <h2>🧪 Projects</h2>
-
-  <div class="card">
-    <h3>Email Forensics Analyzer</h3>
-    <p>Python GUI tool to analyze email headers and detect suspicious activity.</p>
-    <a href="https://github.com/aaysha000/Email_Forensic_Tool">View Project</a>
+  <div class="grid">
+    <div class="card">
+      <h3>Email Forensics Analyzer</h3>
+      <p>Python GUI tool for analyzing suspicious email headers.</p>
+      <a href="https://github.com/aaysha000/Email_Forensic_Tool">View Project</a>
+    </div>
   </div>
-
 </section>
 
-<section id="skills">
+<!-- SKILLS -->
+
+<section>
   <h2>🧠 Skills</h2>
-  <p>
-    Wireshark | Nmap | Python | Linux | Burp Suite | Splunk (Learning)
+  <p style="text-align:center;">
+    Wireshark • Nmap • Python • Linux • Burp Suite • Splunk (learning)
   </p>
 </section>
 
-<section id="contact">
+<!-- CONTACT -->
+
+<section>
   <h2>🔗 Contact</h2>
-  <p>
-    <a href="https://github.com/aaysha000">GitHub</a><br>
+  <p style="text-align:center;">
+    <a href="https://github.com/aaysha000">GitHub</a> |
     <a href="https://tryhackme.com/p/aayshatimalsina">TryHackMe</a>
   </p>
 </section>
 
 <footer>
-  <p>© 2026 Aaysha Timalsina | Cybersecurity Portfolio</p>
+  <p>© 2026 Aaysha Timalsina</p>
 </footer>
 
 </body>
