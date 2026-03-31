@@ -79,7 +79,8 @@ nav a:hover {
 section {
   max-width: 900px;
   margin: auto;
-  padding: 60px 20px;
+  padding: 80px 20px;
+  line-height: 1.6;
 }
 
 h2 {
@@ -104,7 +105,12 @@ h2 {
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 25px;
+}
+
+/* LIST FIX */
+.card ul {
+  padding-left: 18px;
 }
 
 /* LINKS */
@@ -151,15 +157,18 @@ footer {
 </nav>
 
 <div class="hero">
- <h1>Aaysha Timalsina</h1>
- <p>Cybersecurity Student focused on SOC Analysis, Threat Detection, and CTF Challenges</p>
- <p style="color:#6b7280; margin-top:10px;">
+  <h1>Aaysha Timalsina</h1>
+  <p>Cybersecurity Student specializing in SOC Analysis, Threat Detection, and Security Research</p>
+
+  <p style="margin-top:10px;">
     Hands-on experience in log analysis, attack detection, and building security tools.
- </p>
+  </p>
+
+  <p style="margin-top:15px; font-size:14px; color:#9ca3af;">
+    Open to internship opportunities in Cybersecurity and SOC Analysis
+  </p>
 
 <a href="resume.pdf" class="btn">Download Resume</a> <a href="blog.html" class="btn">Read Blogs</a>
-
-  <!-- OPTIONAL PROFILE IMAGE -->
 
   <div class="profile">
     <img src="profile.jpg" alt="Profile">
@@ -180,23 +189,26 @@ footer {
 
   <div class="card">
     <h3>Email Forensics Analyzer</h3>
-<p>
-Developed a Python-based GUI application to analyze email headers, detect suspicious indicators,
-and assist in forensic investigations.
-</p>
-<p style="color:#6b7280; margin-top:10px;">
-Technologies: Python, Tkinter, JSON, CSV
+    <p>
+      Developed a Python-based GUI application to analyze email headers, detect suspicious indicators,
+      and assist in forensic investigations.
+    </p>
+
+```
+<p style="color:#9ca3af;">
+  Technologies: Python, Tkinter, JSON, CSV
 </p>
 
-<ul style="margin-top:10px; color:#9ca3af;">
+<ul>
   <li>Analyzes email metadata and header fields</li>
   <li>Identifies potential phishing indicators</li>
   <li>Implements risk scoring for threat detection</li>
   <li>Exports results in JSON and CSV formats</li>
 </ul>
 
-<a href="https://github.com/aaysha000/Email_Forensic_Tool">View Project</a>
-<a href="labs.html">View Detailed Analysis</a>
+<a href="https://github.com/aaysha000/Email_Forensic_Tool">View Code</a>
+```
+
   </div>
 
 </section>
@@ -205,86 +217,85 @@ Technologies: Python, Tkinter, JSON, CSV
   <h2>SOC Labs</h2>
 
   <div class="grid">
-    <div class="card">
-      <h3>Brute Force Attack Detection</h3>
-<p>
-Simulated an SSH brute force attack using Hydra and analyzed system logs to detect repeated failed login attempts.
-</p>
-
-<ul style="margin-top:10px; color:#9ca3af;">
-  <li>Generated attack traffic using Hydra</li>
-  <li>Analyzed <code>/var/log/auth.log</code> for failed login attempts</li>
-  <li>Identified attacker IP based on repeated attempts</li>
-  <li>Recognized brute force pattern through log frequency</li>
-</ul>
-
-<p style="color:#6b7280; margin-top:10px;">
-Tools: Hydra, Linux Logs
-</p>
-      <a href="labs.html">View Detailed Analysis</a>
-    </div>
 
 ```
 <div class="card">
+  <h3>Brute Force Attack Detection</h3>
+  <p>
+    Simulated an SSH brute force attack using Hydra and analyzed system logs to detect repeated failed login attempts.
+  </p>
+
+  <ul>
+    <li>Generated attack traffic using Hydra</li>
+    <li>Analyzed /var/log/auth.log for failed login attempts</li>
+    <li>Identified attacker IP based on repeated attempts</li>
+    <li>Recognized brute force pattern through log frequency</li>
+  </ul>
+
+  <p style="color:#9ca3af;">
+    Tools: Hydra, Linux Logs
+  </p>
+</div>
+
+<div class="card">
   <h3>Port Scan Detection</h3>
-<p>
-Performed Nmap scans on a target system and analyzed network behavior to identify suspicious scanning activity.
-</p>
+  <p>
+    Performed Nmap scans on a target system and analyzed network behavior to identify suspicious scanning activity.
+  </p>
 
-<ul style="margin-top:10px; color:#9ca3af;">
-  <li>Executed TCP SYN scan using Nmap</li>
-  <li>Observed multiple port access attempts in short time</li>
-  <li>Analyzed abnormal traffic patterns</li>
-  <li>Detected reconnaissance activity based on scan behavior</li>
-</ul>
+  <ul>
+    <li>Executed TCP SYN scan using Nmap</li>
+    <li>Observed multiple port access attempts in short time</li>
+    <li>Analyzed abnormal traffic patterns</li>
+    <li>Detected reconnaissance activity based on scan behavior</li>
+  </ul>
 
-<p style="color:#6b7280; margin-top:10px;">
-Tools: Nmap, Network Analysis
-</p>
-  <a href="labs.html">View Detailed Analysis</a>
+  <p style="color:#9ca3af;">
+    Tools: Nmap, Network Analysis
+  </p>
 </div>
 ```
 
   </div>
 
 </section>
-<p style="text-align:center; margin-top:40px; color:#6b7280;">
-Actively seeking internship opportunities in cybersecurity and SOC analysis.
-</p>
+
 <section id="contact">
- <h2>Contact</h2>
+  <h2>Contact</h2>
 
-<p style="color:#9ca3af;">
-Feel free to connect with me or explore my work through the platforms below.
-</p>
+  <p style="color:#9ca3af;">
+    Feel free to connect with me or explore my work through the platforms below.
+  </p>
 
-<div class="grid">
+  <div class="grid">
 
-  <div class="card">
-    <h3>GitHub</h3>
-    <p>Explore my projects and code repositories.</p>
-    <a href="https://github.com/aaysha000">Visit GitHub</a>
-  </div>
-
-  <div class="card">
-    <h3>TryHackMe</h3>
-    <p>View my cybersecurity learning progress and labs.</p>
-    <a href="https://tryhackme.com/p/aayshatimalsina">View Profile</a>
-  </div>
-
-  <div class="card">
-    <h3>Medium</h3>
-    <p>Read my cybersecurity blogs and lab writeups.</p>
-    <a href="https://medium.com/@aayshatimalsina">Read Blogs</a>
-  </div>
-
-  <div class="card">
-    <h3>LinkedIn</h3>
-    <p>Connect with me professionally.</p>
-    <a href="https://www.linkedin.com/in/aaysha-timalsina-07a197367/">Connect</a>
-  </div>
-
+```
+<div class="card">
+  <h3>GitHub</h3>
+  <p>Explore my projects and code repositories.</p>
+  <a href="https://github.com/aaysha000">Visit GitHub</a>
 </div>
+
+<div class="card">
+  <h3>TryHackMe</h3>
+  <p>View my cybersecurity learning progress and labs.</p>
+  <a href="https://tryhackme.com/p/aayshatimalsina">View Profile</a>
+</div>
+
+<div class="card">
+  <h3>Medium</h3>
+  <p>Read my cybersecurity blogs and lab writeups.</p>
+  <a href="https://medium.com/@aayshatimalsina">Read Blogs</a>
+</div>
+
+<div class="card">
+  <h3>LinkedIn</h3>
+  <p>Connect with me professionally.</p>
+  <a href="https://www.linkedin.com/in/aaysha-timalsina-07a197367/">Connect</a>
+</div>
+```
+
+  </div>
 
 </section>
 
