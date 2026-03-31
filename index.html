@@ -1,48 +1,91 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
-  <title>Aaysha | Cybersecurity Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Aaysha Timalsina | Cybersecurity Portfolio</title>
+
   <style>
     body {
       margin: 0;
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       background: #0f172a;
       color: #e2e8f0;
+      scroll-behavior: smooth;
     }
 
-```
-header {
-  text-align: center;
-  padding: 80px 20px;
-  background: #020617;
-}
+    header {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #020617, #1e293b);
+    }
 
-h1 {
-  margin: 0;
-  font-size: 42px;
-}
+    h1 {
+      margin: 0;
+      font-size: 42px;
+    }
 
-section {
-  max-width: 900px;
-  margin: auto;
-  padding: 40px 20px;
-}
+    header p {
+      font-size: 18px;
+      color: #94a3b8;
+    }
 
-.card {
-  background: #1e293b;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 10px;
-}
+    nav {
+      background: #020617;
+      padding: 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
 
-a {
-  color: #38bdf8;
-  text-decoration: none;
-}
-```
+    nav a {
+      color: #38bdf8;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
+    nav a:hover {
+      color: white;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+      background: #334155;
+    }
+
+    h2 {
+      border-bottom: 2px solid #38bdf8;
+      padding-bottom: 5px;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      color: #64748b;
+    }
   </style>
+
 </head>
 
 <body>
@@ -52,63 +95,78 @@ a {
   <p>Cybersecurity Student | SOC Analyst | CTF Player</p>
 </header>
 
-<section>
+<nav>
+  <a href="#about">About</a>
+  <a href="#labs">SOC Labs</a>
+  <a href="#offensive">Offensive</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
   <h2>🛡️ About Me</h2>
   <p>
-    Cybersecurity student with hands-on experience in log analysis, 
-    network security, and solving CTF challenges. 
-    Currently building real-world SOC labs and security tools.
+    I am a cybersecurity student passionate about detecting attacks, analyzing logs, 
+    and solving real-world security challenges. I actively work on SOC labs, 
+    CTF challenges, and security tools using Python.
   </p>
 </section>
 
-<section>
+<section id="labs">
   <h2>🔍 SOC Labs</h2>
 
   <div class="card">
     <h3>Brute Force Detection</h3>
-    <p>Simulated SSH brute force attack using Hydra and detected it using logs.</p>
+    <p>Simulated SSH brute force attack using Hydra and detected it through log analysis.</p>
   </div>
 
   <div class="card">
     <h3>Port Scan Detection</h3>
-    <p>Analyzed Nmap scans and identified suspicious activity.</p>
+    <p>Analyzed Nmap scans and identified suspicious network behavior.</p>
   </div>
 
 </section>
 
-<section>
+<section id="offensive">
   <h2>🔴 Offensive Security</h2>
 
   <div class="card">
     <h3>XSS Lab</h3>
-    <p>Tested and exploited basic cross-site scripting vulnerabilities.</p>
+    <p>Tested and exploited cross-site scripting vulnerabilities in lab environments.</p>
   </div>
 
 </section>
 
-<section>
+<section id="projects">
   <h2>🧪 Projects</h2>
 
   <div class="card">
     <h3>Email Forensics Analyzer</h3>
-    <p>Python GUI tool to analyze suspicious emails.</p>
+    <p>Python GUI tool to analyze email headers and detect suspicious activity.</p>
     <a href="https://github.com/aaysha000/Email_Forensic_Tool">View Project</a>
   </div>
 
 </section>
 
-<section>
+<section id="skills">
   <h2>🧠 Skills</h2>
-  <p>Wireshark | Nmap | Python | Linux | Splunk (learning)</p>
+  <p>
+    Wireshark | Nmap | Python | Linux | Burp Suite | Splunk (Learning)
+  </p>
 </section>
 
-<section>
-  <h2>🔗 Links</h2>
+<section id="contact">
+  <h2>🔗 Contact</h2>
   <p>
     <a href="https://github.com/aaysha000">GitHub</a><br>
     <a href="https://tryhackme.com/p/aayshatimalsina">TryHackMe</a>
   </p>
 </section>
+
+<footer>
+  <p>© 2026 Aaysha Timalsina | Cybersecurity Portfolio</p>
+</footer>
 
 </body>
 </html>
