@@ -12,12 +12,16 @@ justify-content: space-between;
 padding: 15px 40px;
 background: #020617;
 border-bottom: 1px solid #1e293b;
+position: sticky;
+top: 0;
 }
 
+/* LINKS */
 nav a {
 color: #38bdf8;
 margin-left: 20px;
 text-decoration: none;
+transition: 0.3s;
 }
 
 nav a:hover {
@@ -43,6 +47,12 @@ section {
 max-width: 1000px;
 margin: auto;
 padding: 60px 20px;
+animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(20px);}
+to { opacity: 1; transform: translateY(0);}
 }
 
 h2 {
@@ -67,8 +77,26 @@ transition: 0.3s;
 }
 
 .card:hover {
-transform: translateY(-5px);
+transform: translateY(-8px);
 border-color: #a78bfa;
+box-shadow: 0 0 15px #a78bfa33;
+}
+
+/* BUTTON */
+.btn {
+display: inline-block;
+padding: 10px 20px;
+background: #a78bfa;
+color: black;
+border-radius: 6px;
+text-decoration: none;
+margin-top: 10px;
+transition: 0.3s;
+}
+
+.btn:hover {
+background: #7c3aed;
+color: white;
 }
 
 /* FOOTER */
